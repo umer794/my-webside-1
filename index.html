@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Love Story</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="song/jahan tum ho.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- LOGIN PAGE -->
+  <div id="login-page">
+    <div class="login-box">
+      <h2>Login to Our Love Story</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p id="error-message"></p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main-content" style="display: none;">
+    <div class="entry-heart" id="entryHeart">
+  <span>I LOVE YOU <br /> ALISHBA</span> </div>
+
+
+
+    <div class="heart"></div>
+    <h1>ALISHBA MY QUEEN</h1>
+
+    <div id="typewriter"></div>
+
+    <h2 class="memories-title">🌸 Memories 🌸</h2>
+    <div id="photos">
+      <img src="pic/photo 1 (1).jpg" />
+      <img src="pic/photo 5 (1).jpg" />
+      <img src="pic/photo 2 (1).jpg" />
+      <img src="pic/photo 3 (1).jpg" />
+      <img src="pic/photo 4 (1).jpg" />
+    </div>
+
+    <!-- Videos -->
+    <div class="videos">
+      <video width="200" controls>
+        <source src="video/video 1.mp4" type="video/mp4"> </Video>
+
+        <video width="200" controls>
+        <source src="video/video 2.mp4" type="video/mp4"> </Video>
+     </div>
+          <!-- Upload Area -->
+    <input type="file" id="upload" multiple accept="image/*,video/*" />
+    <div id="custom-media"></div>
+  
+    <script src="app.js"></script>
+</body>
+</html>

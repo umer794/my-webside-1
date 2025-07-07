@@ -1,0 +1,240 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffdee9, #b5fffc);
+  color: #4b004b;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Login Page */
+#login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px hotpink;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px red; }
+  100% { box-shadow: 0 0 30px crimson; }
+}
+
+input, button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+button {
+  background: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+/* Main Heading */
+h1 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 36px;
+  color: darkred;
+  margin: 20px 0;
+}
+
+/* Typewriter Effect */
+#typewriter {
+  max-width: 90%;
+  margin: 0 auto 30px;
+  font-size: 20px;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 6s steps(60) 1 forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.memories-title {
+  font-size: 28px;
+  margin: 20px 0 10px;
+  color: #e91e63;
+}
+
+/* Photos */
+#photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px;
+}
+
+#photos img {
+  width: 120px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px pink;
+}
+
+/* Videos */
+.videos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Uploads */
+#upload {
+  margin: 20px auto;
+  display: block;
+}
+
+#custom-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#custom-media img,
+#custom-media video {
+  width: 180px;
+  border-radius: 10px;
+}
+
+/* Heart Shape */
+.heart {
+  width: 100px;
+  height: 90px;
+  background: red;
+  position: relative;
+  margin: 30px auto;
+  transform: rotate(-45deg);
+  animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1) rotate(-45deg); }
+  50% { transform: scale(1.1) rotate(-45deg); }
+}
+
+/* Entry Heart Animation */
+.entry-heart {
+  width: 250px;
+  height: 230px;
+  background: red;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%) rotate(-45deg);
+  animation: floatHeart 5s ease-out forwards;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.entry-heart span {
+  transform: rotate(45deg);
+  font-size: 24px;
+  color: white;
+  text-shadow: 0 0 6px crimson;
+  line-height: 1.4;
+}
+
+.entry-heart::before,
+.entry-heart::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 230px;
+  background: red;
+  border-radius: 50%;
+}
+
+.entry-heart::before {
+  top: -125px;
+  left: 0;
+}
+
+.entry-heart::after {
+  left: 125px;
+  top: 0;
+}
+
+@keyframes floatHeart {
+  0% {
+    top: 80%;
+    opacity: 1;
+    background: red;
+  }
+  50% {
+    top: 50%;
+    background: pink;
+  }
+  100% {
+    top: 30%;
+    opacity: 0;
+    background: pink;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 { font-size: 24px; }
+  #typewriter { font-size: 16px; }
+  #photos img,
+  .videos video,
+  #custom-media img,
+  #custom-media video {
+    width: 90%;
+  }
+}
